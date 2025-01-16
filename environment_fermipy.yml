@@ -1,0 +1,13 @@
+name: fermipy
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - fermi::fermitools>=2.2.0
+  - healpy
+  - gammapy=1.3
+  - astroquery=0.4.7
+  - tqdm=4.67.1
+  - pip:
+      - fermipy==1.3.1
