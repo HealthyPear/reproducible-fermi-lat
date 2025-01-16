@@ -101,7 +101,8 @@ rule run_fermipy_null_hypothesis:
     input:
         "src/data/Fermi_LAT/fermipy_analysis/ltcube_00.fits"
     output:
-        "src/data/Fermi_LAT/fermipy_analysis/null_hypothesis.npy"
+        "src/data/Fermi_LAT/fermipy_analysis/null_hypothesis.npy",
+        "src/data/Fermi_LAT/fermipy_analysis/null_hypothesis_tsmap_output.npy"
     conda:
         "environment_fermipy.yml"
     script:
