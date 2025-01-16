@@ -1,0 +1,22 @@
+# https://fermi.gsfc.nasa.gov/cgi-bin/ssc/LAT/LATDataQuery.cgi
+query:
+  name_or_coordinates: [238.929,11.1901] # deg, ICRS
+  coordinate_system: J2000
+  search_radius_degrees: "20"
+  observation_dates: "2024-12-01 00:00:00, 2024-12-15 00:00:00"
+  time_system: Gregorian # 'Gregorian' or 'MET' or 'MJD'
+  energy_range_MeV: 10000, 300000
+  LAT_data_type: Photon
+  spacecraft_data: True
+
+aux_data:
+  # 4FGL catalog in XML format
+  - https://fermi.gsfc.nasa.gov/ssc/data/access/lat/14yr_catalog/gll_psc_v32.xml
+  # # Extended Source template archive
+  - "https://fermi.gsfc.nasa.gov/ssc/data/access/lat/14yr_catalog/LAT_extended_sources_14years.tgz"
+  # # Galactic interstellar emission model
+  - "https://fermi.gsfc.nasa.gov/ssc/data/analysis/software/aux/4fgl/gll_iem_v07.fits"
+  # Isotropic spectral template
+  - "https://fermi.gsfc.nasa.gov/ssc/data/analysis/software/aux/iso_P8R3_SOURCE_V3_v1.txt"
+  
+
