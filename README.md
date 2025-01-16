@@ -1,9 +1,12 @@
-<p align="center">
+<!-- <p align="center">
 <a href="https://github.com/showyourwork/showyourwork">
 <img width = "450" src="https://raw.githubusercontent.com/showyourwork/.github/main/images/showyourwork.png" alt="showyourwork"/>
 </a>
 <br>
-<br>
+<br> -->
+
+# Reproducible Fermi-LAT
+
 <a href="https://github.com/HealthyPear/reproducible-fermi-lat/actions/workflows/build.yml">
 <img src="https://github.com/HealthyPear/reproducible-fermi-lat/actions/workflows/build.yml/badge.svg?branch=main" alt="Article status"/>
 </a>
@@ -17,7 +20,7 @@
 
 An open source scientific article created using the [showyourwork](https://github.com/showyourwork/showyourwork) workflow.
 
-# Requirements
+## Requirements
 
 The only requirement is the Python package [showyourwork](https://show-your.work/en/latest/) and *git*.
 
@@ -38,7 +41,7 @@ documentation and help on any issue with it.
 *showyourwork* uses [snakemake v7.15.2](https://snakemake.readthedocs.io/en/v7.15.2/) for defining
 a workflow.
 
-# How to start a new project
+## How to start a new project
 
 You can start a new project by using this repository as a template.
 
@@ -48,7 +51,7 @@ Using the web page, click on the green button "Use this template" and then
 See [GitHub Docs](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
 for more details.
 
-# How to reproduce results based on this template
+## How to reproduce results based on this template
 
 After installing *showyourwork*, clone this repository with *git*,
 
