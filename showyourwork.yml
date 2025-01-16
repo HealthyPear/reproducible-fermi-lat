@@ -38,6 +38,7 @@ dependencies:
     - src/tex/linenoaa.sty
     - src/data/Fermi_LAT/fermipy_analysis/ltcube_00.fits
     - src/data/Fermi_LAT/fermipy_analysis/null_hypothesis.npy
+    - src/data/Fermi_LAT/fermipy_analysis/null_hypothesis_tsmap_output.npy
 
 # Name of the `.tex` manuscript and corresponding `.pdf` article
 ms_name: ms
