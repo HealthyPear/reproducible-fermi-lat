@@ -1,0 +1,75 @@
+# fermi configuration file
+# docs at https://fermipy.readthedocs.io/en/latest/index.html
+
+# See https://fermipy.readthedocs.io/en/latest/config.html#fileio
+fileio:
+  outdir :  # path of the output directory; if none default to directory containing configuration file
+  logfile : null # Path to log file. If None then log will be written to fermipy.log
+  # savefits : True # save intermediate FITS files
+  # usescratch : False # Run analysis in a temporary working directory under scratchdir.
+  # scratchdir  : '/scratch'
+  # workdir : null # Path to the working directory.
+
+# See https://fermipy.readthedocs.io/en/latest/config.html#data
+data:
+  evfile :  # Path to FT1 file or list of FT1 files.
+  scfile : 
+  ltcube : null # pre-generated livetime cube. If null will be generated at runtime with gtltcube
+  # cacheft1 : True # Cache FT1 files when performing binned analysis. If false then only the counts cube is retained.
+
+# See https://fermipy.readthedocs.io/en/latest/config.html#binning
+binning:
+  roiwidth   : 15.0 # Width of the ROI in degrees. Number of pixels in each spatial dimension set from roiwidth / binsz (rounded up)
+  npix       : null # Number of pixels in x y direction. If null will be set from roiwidth and binsz
+  binsz      : 0.1 # spatial bin size in deg
+  binsperdec : 8   # Number of energy bins per decade
+  coordsys   : CEL # Coordinate system of the spatial projection (CEL or GAL)
+  # projtype   : WCS # Projection mode (WCS or HPX)
+  # proj       : AIT # Spatial projection for WCS mode
+  # hpx_ebin   : True # Include energy binning
+  # hpx_order  : 10 # Order of the map (int between 0 and 12, included)
+  # hpx_ordering_scheme : RING # HEALPix Ordering Scheme
+  #enumbins   : null # Number of energy bins. If null will be inferred from energy range and binsperdec
+
+# See https://fermipy.readthedocs.io/en/latest/config.html#selection
+selection :
+  emin    : 1000 # Minimum Energy (MeV)fermipy_config.yml
+  emax    : 300000 # Maximum Energy (MeV)
+  zmax    : 90 # Maximum zenith angle (deg)
+  evclass : 128 # Event class selection
+  evtype  : 3 # Event type selection
+  tmin    : 239557414 # Minimum time (MET)
+  tmax    : 428903014 # Maximum time (MET)
+  filter  : null # Filter string for gtmktime selection
+  # target  : null # object on which to center the ROI. This option takes precendence over ra/dec or glon/glat
+  ra      : 
+  dec     : 
+
+gtlike:
+  edisp : True
+  irfs : 'P8R3_SOURCE_V3'
+  edisp_disable : ['isodiff']
+  edisp_bins : -1
+
+roiopt:
+  max_free_sources : 15
+  shape_ts_threshold : 9
+
+# See https://fermipy.readthedocs.io/en/latest/config.html#model
+model :
+
+  # Diffuse components
+  galdiff  : # path to one or more galactic IEM mapcubes
+  isodiff  : # path to one or more isotropic templates
+
+  # List of catalogs to be used in the model.
+  catalogs : # path to XML file
+
+  # sources :
+  #   - { 'name' : , 'ra' : , 'dec' : , 'SpectrumType' : }
+      
+  merge_sources : False
+
+  # Width of square region in degrees centered on the ROI that selects sources for inclusion in the model.
+  # If this parameter is none then no selection is applied.
+  src_roiwidth  : 20
