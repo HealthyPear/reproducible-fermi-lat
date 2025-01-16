@@ -31,8 +31,8 @@ datasets:
 
 # Custom file dependencies
 dependencies:
-  # src/scripts/plot_null_hypothesis_tsmap.py:
-  #   - src/data/Fermi_LAT/fermipy_analysis/null_hypothesis.npy
+  src/scripts/plot_null_hypothesis_tsmap.py:
+    - src/data/Fermi_LAT/fermipy_analysis/null_hypothesis_tsmap_output.npy
   src/tex/ms.tex:
     - src/tex/lineno.sty
     - src/tex/linenoaa.sty
